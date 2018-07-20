@@ -1,0 +1,18 @@
+/* ARABIC STYLE AUTOMATION */
+@import "base/_arabic-font.css";
+
+/* BASE */
+@import "base/_variables.pcss";
+@import "base/_mixins.pcss";
+@import "base/_wrapper.pcss";
+@import "base/_global.pcss";
+@import "base/_font.pcss";
+
+/* MODULE */
+@import "modules/_base.pcss";
+@import "modules/_sprite.css";
+@import "modules/_result.pcss";
+@import "modules/_features.pcss";
+@import "modules/_level-chart.pcss";
+@import "modules/_contact.pcss";
+@import "modules/_override.pcss";
