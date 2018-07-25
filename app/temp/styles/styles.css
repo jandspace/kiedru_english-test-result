@@ -496,8 +496,6 @@ Instead edit gulp/templates/sprite */
 							        flex: 0 0 100%;
 							max-width: 100%;
 						}
-@media (max-width: 767px) {
-		}
 @media (min-width: 768px) {
 .field-item .section--result .result .result-item-container .section-body .flex-container .flex-item {
 								-ms-flex-preferred-size: 0;
@@ -514,6 +512,11 @@ Instead edit gulp/templates/sprite */
 									color: #FFFFFF;
 									margin-top: 1em;
 								}
+@media (max-width: 767px) {
+.field-item .section--result .result .result-item-container .section-body .flex-container .flex-item .item-box .your-level {
+										text-align: center
+								}
+		}
 .field-item .section--result .result .result-item-container .section-body .flex-container .flex-item .item-box .your-level .level-desc {
 										font-size: 14px;
 									}
@@ -632,8 +635,11 @@ Instead edit gulp/templates/sprite */
 															top: -68px;
 															left: -10px;
 															background-color: black;
-															background: url('../../assets/images/icon-human.gif') center bottom no-repeat;
+															background: url('//assetlibs.kaplaninternational.com/_assets/english-test-result/icon-human.gif') center bottom no-repeat;
 															background-size: cover;
+														}
+.field-item .section--result .result .result-item-container .section-body .flex-container .flex-item .level-chart ul.flex-container li.level-col .level-bar:hover .level-indicator {
+															background-color: rgba(255,255,255,0.5);
 														}
 .field-item .section--result .result .result-item-container .section-body .flex-container .flex-item .level-chart ul.flex-container li:nth-child(1) .level-indicator { height: calc(50% - 68px); }
 .field-item .section--result .result .result-item-container .section-body .flex-container .flex-item .level-chart ul.flex-container li:nth-child(2) .level-indicator { height: calc(60% - 68px); }
@@ -848,8 +854,6 @@ body.language-dir-rtl .field-item .section--result .result .result-item-containe
 											border-color: #00A4D9;
 										}
 		}
-.field-item .section--features .features .section-body .cta-container .cta-desc {
-					}
 .field-item .section--level-chart {
 		background-color: #EEEEEE;
 	}
@@ -898,7 +902,7 @@ body.language-dir-rtl .field-item .section--result .result .result-item-containe
 								overflow: hidden;
 							}
 .field-item .section--level-chart .level-chart .section-body .flex-container.eng-progress .flex-item .flex-item-inner:before {
-									content: "";
+									/* content: ""; */
 									display: block;
 									position: absolute;
 									top: 0;
@@ -1058,61 +1062,119 @@ body.language-dir-rtl .field-item .section--result .result .result-item-containe
 														display: inline-block;
 													}
 		}
-.field-item .section--partners .partners .section-head {
-			}
-.field-item .section--partners .partners .section-body .flex-container .flex-item {
-						-webkit-box-flex: 0;
-						    -ms-flex: 0 0 50%;
-						        flex: 0 0 50%;
-						max-width: 50%;
-						padding-top: 0;
-						padding-bottom: 20px;
-						text-align: center;
+.field-item .section--contact-us {
+		border: none;
+		background: rgb(124, 111, 168);
+		background: -webkit-gradient(linear, left top, left bottom, from(rgba(124, 111, 168, 1)), to(rgba(36, 15, 110, 1)));
+		background: linear-gradient(to bottom, rgba(124, 111, 168, 1) 0%, rgba(36, 15, 110, 1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7c6fa8', endColorstr='#240f6e', GradientType=0);
+	}
+.field-item .section--contact-us .contact-us .section-head h2.title,
+				.field-item .section--contact-us .contact-us .section-head p.desc {
+					color: #FFFFFF;
+				}
+.field-item .section--contact-us .contact-us .section-body .cta-container {
+					margin-top: 0;
+				}
+.field-item .section--contact-us .contact-us .section-body .cta-container .desc {
+						color: #FFFFFF;
+						font-size: 16px;
 					}
-@media (min-width: 768px) {
-.field-item .section--partners .partners .section-body .flex-container .flex-item {
-							-webkit-box-flex: 0;
-							    -ms-flex: 0 0 16.66666666%;
-							        flex: 0 0 16.66666666%;
-							max-width: 16.66666666%
+.field-item .section--contact-us .contact-us .section-body .cta-container .btn {
+						display: block;
+						font-size: 14px !important;
+						margin: 10px auto;
+						min-width: unset;
+						max-width: 290px;
 					}
-		}
-.field-item .section--partners .partners .section-body .flex-container .flex-item .item-box {
+.field-item .section--contact-us .contact-us .section-body .cta-container .btn.main-cta-ani {
 							position: relative;
+							z-index: 1;							
+							color: #FFFFFF;
+							text-transform: uppercase;
+							font-weight: 700;
+							line-height: 1.1;
+							padding: 1.25em 1em;
+							background-color: #007DB3;
+							border: 1px solid transparent;
 							overflow: hidden;
-							height: 0;
-							padding-top: 75%;
+							white-space: nowrap;
+							background: -webkit-gradient(linear, right top, left top, from(#007DB3), color-stop(#007DB3), color-stop(#00E4FF), color-stop(#007DB3), to(#007DB3));
+							background: linear-gradient(270deg, #007DB3, #007DB3, #00E4FF, #007DB3, #007DB3);
+							background-size: 600% 600%;
+							-webkit-animation: MainCTAAni 5s ease infinite;
+							animation: MainCTAAni 5s ease infinite;
 						}
-.field-item .section--partners .partners .section-body .flex-container .flex-item .item-box .item-box-inner {
+.field-item .section--contact-us .contact-us .section-body .cta-container .btn.main-cta-ani:before {
+								content: '';
 								position: absolute;
+								z-index: -1;
 								top: 0;
 								left: 0;
-								width: 100%;
+								width: 0;
 								height: 100%;
-								padding: 15px;
+								background-color: #FFFFFF;
+								-webkit-transition: width .3s;
+								transition: width .3s;
 							}
-@media (min-width: 992px) {
-.field-item .section--partners .partners .section-body .flex-container .flex-item .item-box .item-box-inner {
-									padding: 30px 15px
+.field-item .section--contact-us .contact-us .section-body .cta-container .btn:hover {
+							border: 1px solid #FFFFFF !important;
+							text-decoration: none;
+						}
+.field-item .section--contact-us .contact-us .section-body .cta-container .btn:hover:before {
+								width: 100%;
 							}
-		}
-.field-item .section--partners .partners .section-body .flex-container .flex-item .item-box .item-box-inner .centering {
-									height: 100%;
-									display: -webkit-box;
-									display: -ms-flexbox;
-									display: flex;
-									-webkit-box-pack: center;
-									    -ms-flex-pack: center;
-									        justify-content: center;
-									-webkit-box-align: center;
-									    -ms-flex-align: center;
-									        align-items: center;
+.field-item .section--contact-us .contact-us .section-body .cta-container .btn:hover span {
+								color: #007DB3;
+							}
+.field-item .section--contact-us .contact-us .section-body .cta-container .btn.btn-brochure {
+							position: relative;
+							z-index: 1;
+							width: 100%;							
+							padding: 0.75em;
+							color: #FFC82E;
+							background: transparent;							
+							text-decoration: underline;
+							text-transform: uppercase;
+							text-align: center;
+							font-weight:700;
+							border: 1px solid transparent;
+							-webkit-transition: all .2s ease-out;
+							transition: all .2s ease-out;
+
+						}
+.field-item .section--contact-us .contact-us .section-body .cta-container .btn.btn-brochure:before {
+								content: '';
+								position: absolute;
+								z-index: -1;
+								top: 0;
+								left: 0;
+								width: 0;
+								height: 100%;
+								background-color: #FFFFFF;
+								-webkit-transition: width .3s;
+								transition: width .3s;
+							}
+.field-item .section--contact-us .contact-us .section-body .cta-container .btn.btn-brochure:hover {
+								border: 1px solid #FFFFFF !important;
+								text-decoration: none;
+
+							}
+.field-item .section--contact-us .contact-us .section-body .cta-container .btn.btn-brochure:hover:before {
+									width: 100%;
 								}
-.field-item .section--partners .partners .section-body .flex-container .flex-item .item-box .item-box-inner .centering img {
-										max-height: 100%;
-										height: auto !important;
-										width: auto !important;
-									}
+.field-item .section--contact-us .contact-us .section-body .cta-container .btn.btn-brochure:hover span {
+									color: #007DB3;
+								}
+/* Gradient Animation */
+@-webkit-keyframes MainCTAAni {
+  0%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@keyframes MainCTAAni { 
+  0%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
 div {
 	
 }

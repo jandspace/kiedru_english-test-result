@@ -1,6 +1,6 @@
 .field-item {
 	.section--level-chart {
-		background-color: #EEEEEE;
+		background-color: $color-grey-d;
 		.level-chart {
 			.section-head {
 			}
@@ -44,24 +44,24 @@
 							.flex-item-inner {
 								width: 100%;
 								position: relative;
-								background-color: #FFFFFF;
+								background-color: $color-white;
 								overflow: hidden;
 
 								&:before {
-									content: "";
+									/* content: ""; */
 									display: block;
 									position: absolute;
 									top: 0;
 									left: 0;
 									width: 1px;
 									height: 100%;
-									background: #CCCCCC;
+									background: $color-grey-f;
 								}
 
 								&[class*='lv-'] {
 									.item-head {
 										position: relative;
-										background-color: #EEEEEE;
+										background-color: $color-grey-d;
 										height: 200px;
 
 										&:before {
@@ -90,14 +90,14 @@
 												bottom: 100%;
 												padding-top: 12px;
 												line-height: 1;
-												background-color: #EEEEEE;
+												background-color: $color-grey-d;
 												.number {
-													color: #404040;
+													color: $color-grey-j;
 													font-size: 28px;
 													font-weight: 700;
 												}
 												.text {
-													color: #404040;
+													color: $color-grey-j;
 													font-size: 13px;
 												}
 											}
@@ -107,7 +107,7 @@
 												text-align: center;
 												text-transform: uppercase;
 												font-weight: 800;
-												color: #FFFFFF;	
+												color: $color-white;	
 												font-size: 13px;
 											}
 										}
@@ -127,10 +127,10 @@
 										.exam-level {
 											.label {
 												display: inline-block;
-												color: #FFFFFF;
+												color: $color-white;
 												font-weight: 800;
 												text-transform: uppercase;
-												background-color: #7C6FA8;
+												background-color: $color-primary-w60;
 												font-size: 10px;
 												padding: 4px 6px;
 												margin-bottom: 0.5em;

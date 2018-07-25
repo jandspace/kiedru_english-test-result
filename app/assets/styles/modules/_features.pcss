@@ -32,7 +32,7 @@
 								height: 100%;
 								left: 0;
 								top: 0;
-								background-color: #DDDDDD;
+								background-color: $color-grey-e;
 							}
 
 							@mixin xs-max {
@@ -75,7 +75,7 @@
 							}
 							h3.title {
 								a {
-									color: #202020;
+									color: $color-grey-l;
 									font-size: 18px;
 									font-weight: 700;
 									text-transform: uppercase;
@@ -107,7 +107,7 @@
 											height: 20px;
 											top: 2px;
 											left: 2px;
-											color: #00A4D9;
+											color: $color-secondary-bluegreen;
 										}
 									}
 								}
@@ -116,13 +116,13 @@
 									font-size: 14px !important;
 									padding: 12px 20px;
 									margin: 0 0 1em 0;
-									color: #007DB3;
+									color: $color-secondary-deepbluegreen;
 									font-weight: 700;
 									text-decoration: none;
 									text-transform: none;
 									background-color: transparent;
-									border: 1px solid #007DB3;
-									border-bottom: 4px solid #007DB3;
+									border: 1px solid $color-secondary-deepbluegreen;
+									border-bottom: 4px solid $color-secondary-deepbluegreen;
 									@mixin xs-max {
 										min-width: 240px;
 									}
@@ -132,19 +132,14 @@
 									}
 									@mixin md-min {
 										&:hover {
-											color: #FFFFFF;
-											background-color: #00A4D9;
-											border-color: #00A4D9;
+											color: $color-white;
+											background-color: $color-secondary-bluegreen;
+											border-color: $color-secondary-bluegreen;
 										}
 									}
 								}
 							}
 						}
-					}
-				}
-
-				.cta-container {
-					.cta-desc {
 					}
 				}
 			}

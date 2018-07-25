@@ -16,13 +16,13 @@
 				bottom: 0;
 				left: -50%;				
 				border-width: 0 30px 30px 0;
-				border-color: transparent transparent #FFFFFF transparent;
+				border-color: transparent transparent $color-white transparent;
 			}
 			&:after {
 				bottom: 0;
 				right: -50%;
 				border-width: 0 0 30px 30px;
-				border-color: transparent transparent #FFFFFF transparent;
+				border-color: transparent transparent $color-white transparent;
 			}
 
 			.result-item-container {
@@ -31,12 +31,12 @@
 					text-align: left;
 					border-bottom: 1px solid rgba(255,255,255,0.25);
 					h1.title {
-						color: #FFFFFF;
+						color: $color-white;
 						text-transform: uppercase;
 						font-size: 32px;
 					}
 					p.desc {
-						color: #FFFFFF;
+						color: $color-white;
 						font-size: 14px;
 						max-width: none;
 					}
@@ -70,8 +70,7 @@
 							-ms-flex: 0 0 100%;
 							flex: 0 0 100%;
 							max-width: 100%;
-							@mixin xs-max {
-							}
+							
 							@mixin sm-min {
 								-ms-flex-preferred-size: 0;
 								flex-basis: 0;
@@ -84,8 +83,12 @@
 
 							.item-box {
 								.your-level {
-									color: #FFFFFF;
+									color: $color-white;
 									margin-top: 1em;
+									@mixin xs-max {
+										text-align: center;
+									}
+
 									.level-desc {
 										font-size: 14px;
 										@mixin md-min {
@@ -93,7 +96,7 @@
 										}
 									}
 									.et-level-title {
-										color: #FFC82E;
+										color: $color-accent-yellow;
 										font-size: 24px;
 										text-transform: uppercase;
 										margin-bottom: 0.2em;
@@ -113,16 +116,16 @@
 											width: auto;
 											font-size: 14px !important;
 											padding: 12px 20px;
-											color: #00E4FF;
+											color: $text-link-lighter;
 											text-decoration: none;
 											text-transform: none;
 											background-color: transparent;
-											border: 1px solid #00E4FF;
+											border: 1px solid $text-link-lighter;
 											@mixin md-min {
 												&:hover {
-													color: #FFFFFF;
-													background-color: #00A4D9;
-													border: 1px solid #00A4D9;
+													color: $color-white;
+													background-color: $color-secondary-bluegreen;
+													border: 1px solid $color-secondary-bluegreen;
 												}
 											}
 										}
@@ -197,8 +200,13 @@
 															top: -68px;
 															left: -10px;
 															background-color: black;
-															background: url('../../assets/images/icon-human.gif') center bottom no-repeat;
+															background: url('//assetlibs.kaplaninternational.com/_assets/english-test-result/icon-human.gif') center bottom no-repeat;
 															background-size: cover;
+														}
+													}
+													&:hover {
+														.level-indicator {
+															background-color: rgba(255,255,255,0.5);
 														}
 													}
 
@@ -213,27 +221,27 @@
 										}
 									}
 									&.et-level-1 li.level-col:nth-child(1) .level-bar .level-indicator {
-										background-color: #FFC82E;
+										background-color: $color-accent-yellow;
 										&:before { content: ""; }
 									}
 									&.et-level-2 li.level-col:nth-child(2) .level-bar .level-indicator {
-										background-color: #FFC82E;
+										background-color: $color-accent-yellow;
 										&:before { content: ""; }
 									}
 									&.et-level-3 li.level-col:nth-child(3) .level-bar .level-indicator {
-										background-color: #FFC82E;
+										background-color: $color-accent-yellow;
 										&:before { content: ""; }
 									}
 									&.et-level-4 li.level-col:nth-child(4) .level-bar .level-indicator {
-										background-color: #FFC82E;
+										background-color: $color-accent-yellow;
 										&:before { content: ""; }
 									}
 									&.et-level-5 li.level-col:nth-child(5) .level-bar .level-indicator {
-										background-color: #FFC82E;
+										background-color: $color-accent-yellow;
 										&:before { content: ""; }
 									}
 									&.et-level-6 li.level-col:nth-child(6) .level-bar .level-indicator {
-										background-color: #FFC82E;
+										background-color: $color-accent-yellow;
 										&:before { content: ""; }
 									}
 								}
@@ -242,7 +250,7 @@
 									text-align: center;
 									padding: 6px 0 15px 0;
 									a {
-										color: #FFC82E;
+										color: $color-accent-yellow;
 										text-decoration: underline;
 									}
 								}

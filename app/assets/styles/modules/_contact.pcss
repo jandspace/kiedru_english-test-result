@@ -1,53 +1,133 @@
 .field-item {
-	.section--partners {
-		.partners {
+	.section--contact-us {
+		border: none;
+		background: rgb(124, 111, 168);
+		background: -moz-linear-gradient(top, rgba(124, 111, 168, 1) 0%, rgba(36, 15, 110, 1) 100%);
+		background: -webkit-linear-gradient(top, rgba(124, 111, 168, 1) 0%, rgba(36, 15, 110, 1) 100%);
+		background: linear-gradient(to bottom, rgba(124, 111, 168, 1) 0%, rgba(36, 15, 110, 1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7c6fa8', endColorstr='#240f6e', GradientType=0);
+
+		.contact-us {
 			.section-head {
+				h2.title,
+				p.desc {
+					color: $color-white;
+				}
 			}
 			.section-body {
-				.flex-container {
-					.flex-item {
-						flex: 0 0 50%;
-						max-width: 50%;
-						padding-top: 0;
-						padding-bottom: 20px;
-						text-align: center;
+				.cta-container {
+					.desc {
+						color: $color-white;
+						font-size: 16px;
+					}
+					margin-top: 0;
+					.btn {
+						display: block;
+						font-size: 14px !important;
+						margin: 10px auto;
+						min-width: unset;
+						max-width: 290px;
 
-						@mixin sm-min {
-							flex: 0 0 16.66666666%;
-							max-width: 16.66666666%;
-						}
-
-						.item-box {
+						&.main-cta-ani {
 							position: relative;
+							z-index: 1;							
+							color: $color-white;
+							text-transform: uppercase;
+							font-weight: 700;
+							line-height: 1.1;
+							padding: 1.25em 1em;
+							background-color: $color-secondary-deepbluegreen;
+							border: 1px solid transparent;
 							overflow: hidden;
-							height: 0;
-							padding-top: 75%;
-							.item-box-inner {
+							white-space: nowrap;
+							background: linear-gradient(270deg, $color-secondary-deepbluegreen, $color-secondary-deepbluegreen, $text-link-lighter, $color-secondary-deepbluegreen, $color-secondary-deepbluegreen);
+							background-size: 600% 600%;
+							-webkit-animation: MainCTAAni 5s ease infinite;
+							-moz-animation: MainCTAAni 5s ease infinite;
+							animation: MainCTAAni 5s ease infinite;
+
+							&:before {
+								content: '';
 								position: absolute;
+								z-index: -1;
 								top: 0;
 								left: 0;
-								width: 100%;
+								width: 0;
 								height: 100%;
-								padding: 15px;
-								@mixin md-min {
-									padding: 30px 15px;
-								}
-								.centering {
-									height: 100%;
-									display: flex;
-									justify-content: center;
-									align-items: center;
-									img {
-										max-height: 100%;
-										height: auto !important;
-										width: auto !important;
-									}
-								}
+								background-color: $color-white;
+								transition: width .3s;
 							}
+						}
+
+						&:hover {
+							border: 1px solid $color-white !important;
+							text-decoration: none;
+
+							&:before {
+								width: 100%;
+							}
+							span {
+								color: $color-secondary-deepbluegreen;
+							}
+						}
+
+						&.btn-brochure {
+							position: relative;
+							z-index: 1;
+							width: 100%;							
+							padding: 0.75em;
+							color: $color-accent-yellow;
+							background: transparent;							
+							text-decoration: underline;
+							text-transform: uppercase;
+							text-align: center;
+							font-weight:700;
+							border: 1px solid transparent;
+							transition: all .2s ease-out;
+
+							&:before {
+								content: '';
+								position: absolute;
+								z-index: -1;
+								top: 0;
+								left: 0;
+								width: 0;
+								height: 100%;
+								background-color: $color-white;
+								transition: width .3s;
+							}
+
+							&:hover {
+								border: 1px solid $color-white !important;
+								text-decoration: none;
+
+								&:before {
+									width: 100%;
+								}
+
+								span {
+									color: $color-secondary-deepbluegreen;
+								}
+
+							}
+
 						}
 					}
 				}
 			}
 		}
 	}
+}
+/* Gradient Animation */
+@-webkit-keyframes MainCTAAni {
+  0%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@-moz-keyframes MainCTAAni {
+  0%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@keyframes MainCTAAni { 
+  0%{background-position:100% 50%}
+  100%{background-position:0% 50%}
 }
