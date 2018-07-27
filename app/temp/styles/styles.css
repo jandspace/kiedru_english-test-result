@@ -431,9 +431,11 @@ Instead edit gulp/templates/sprite */
 	}
 .field-item .section--result .result:before, .field-item .section--result .result:after {
 				content: "";
+				display: block;
 				position: absolute;
 				width: 100%;
 				border-style: solid;
+				clear: none;
 			}
 .field-item .section--result .result:before {
 				bottom: 0;
@@ -635,7 +637,7 @@ Instead edit gulp/templates/sprite */
 															top: -68px;
 															left: -10px;
 															background-color: black;
-															background: url('//assetlibs.kaplaninternational.com/_assets/english-test-result/icon-human.gif') center bottom no-repeat;
+															background: url('//assetlibs.kaplaninternational.com/_assets/english-test-result/images/icon-human.gif') center bottom no-repeat;
 															background-size: cover;
 														}
 .field-item .section--result .result .result-item-container .section-body .flex-container .flex-item .level-chart ul.flex-container li.level-col .level-bar:hover .level-indicator {
